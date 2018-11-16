@@ -220,25 +220,6 @@ int quadrant(int start[],int end[])			///here is returned the quadrant or axe wh
 		if(end[0]>start[0] && end[1]==start[1]){return 8;}	///x=0 ^ y<0
 }
 
-/***
-void current_board1()
-{
-	for(int f_1 = 0; f_1<8; f_1++)
-	{
-		cout<<"\t\t\t\t\t ";
-		for(int p_1 = 0; p_1<17;p_1++){cout<<"-";}
-		cout<<endl<<"\t\t\t\t\t"<<8-f_1<<"|";
-		for(int c_1 = 0; c_1<8; c_1++)
-		{
-			cout<<board[f_1][c_1]<<"|";
-		}
-	cout<<endl;
-	}
-	cout<<"\t\t\t\t\t ";
-	for(int p_1 = 0; p_1<17;p_1++){cout<<"-";}
-	cout<<endl;
-	cout<<"\t\t\t\t\t  A B C D E F G H"<<endl;
-}***/
 
 
 void current_board(int player)
@@ -570,9 +551,7 @@ bool king(int start[], int end[], int player)
 				if(warning(row_,column_,player)==false){board[row_][column_] = board[start[0]][start[1]]; board[start[0]][start[1]] = ' ';return true;}
 			}
 	}
-///	if(warning(row_,column_,player)==false && shall_I_attack(board[row_][column_],player)==true && end[0]==row_ && end[1]==column_)
-	///	{board[row_][column_] = board[start[0]][start[1]]; board[start[0]][start[1]] = ' ';return true;}
-	
+
 	row_--;
 	
 	if(end[0]==row_ && end[1]==column_)
@@ -770,9 +749,7 @@ return false;
 bool pawn(int start[], int end[], int player)
 {
 	if((player==1 && board[start[0]][start[1]]=='p') || (player==2 && board[start[0]][start[1]]=='P')){return false;}
-	cout<<"pawn";
-///int row = start[0];
-///	int column = start[1];
+
 	if(player==2)
 	{
 		return pawn_iter(start,end,2,1,2);	
