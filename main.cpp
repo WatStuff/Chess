@@ -1,5 +1,5 @@
 #include<iostream>
-
+#include<funct.h>
 using namespace std;
 
 char board[][8] ={	{'t','h','b','k','q','b','h','t'},
