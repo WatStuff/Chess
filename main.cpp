@@ -12,7 +12,7 @@ char board[][8] =
 			{'T','H','B','K','Q','B','H','T'}};
 
 
-#include</home/wat1/Programming/C++/projects/chess/mainP2/chess_functions.h>
+#include<chess_functions.h>
 
 int main()
 {
